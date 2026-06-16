@@ -13,6 +13,11 @@ class CustomUser(AbstractUser):
 
 
 class Category(models.Model):
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
+
     name = models.CharField(max_length=100)
     slug = models.SlugField()
     image = models.ImageField(upload_to='category_img', null = True, blank = True)
